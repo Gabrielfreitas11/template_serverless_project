@@ -1,0 +1,42 @@
+{
+  "name": "altu-serverless",
+  "version": "1.0.0",
+  "description": "ALTU Serverless functions for AWS Lambda",
+  "author": "Marcos Duarte",
+  "scripts": {
+    "check": "npm-check -u",
+    "test": "cross-env stage='test' jest --passWithNoTests --silent false --noStackTrace --runInBand",
+    "test:ci": "npm test -- --coverage",
+    "test:example": "npm test -- --no-cache --watch /services/fis",
+    "offline": "sls offline start -s local --config-file services/example/config.yml",
+    "test:staged": "npm test -- --findRelatedTests",
+    "deploy:dev": "sls deploy -s dev --config-file services/example/config.yml"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "aws-sdk": "^2.740.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.0",
+    "husky": "^4.3.0",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.4.0",
+    "serverless-domain-manager": "^3.3.1",
+    "serverless-offline": "^5.12.1"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.0",
+    "axios": "^0.21.1",
+    "jsonpath": "^1.0.2",
+    "luxon": "^1.28.0",
+    "luxon-business-days": "^2.8.3",
+    "moment": "^2.29.1",
+    "mongoose": "5.12.1",
+    "mysql2": "^2.2.5",
+    "redis": "^3.0.2",
+    "sequelize": "^6.6.2"
+  }
+}

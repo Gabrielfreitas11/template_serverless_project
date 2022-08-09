@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  serverless:
+    build:
+      context: ./docker/serverless
+    volumes:
+      - ./:/home/serverless
+      - ./config/aws:/root/.aws
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7
+    platform: "linux/x86_64"
+    build:
+      context: ./docker/database
+    environment:
+      - MYSQL_DATABASE=lambda
+      - MYSQL_PASSWORD=root
+      # NAO MUDAR O ROOT_PASSWORD
+      - MYSQL_ROOT_PASSWORD=docker
+    volumes:
+      - database-data:/var/lib/mysql
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: "docker.io/bitnami/redis:6.0-debian-10"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    ports:
+      - "6379:6379"
+
+  mongodb:
+    image: mongo
+    container_name: mongodb-serverless
+    ports:
+      - '27017-27019:27017-27019'
+    restart: always
+    volumes:
+      - data:/data/db
+
+volumes:
+  data:
+  database-data:
+    driver: "local"

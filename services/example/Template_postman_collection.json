@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "536758a8-d555-4312-8fde-7d56e01b267d",
+		"name": "Template",
+		"description": "This API has the principle of adding and getting the data that is saved inside the mongoDB database\n\n-\n\nEssa API tem como principio adicionar e coletar os dados que são salvos dentro do banco de dados do mongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9323368"
+	},
+	"item": [
+		{
+			"name": "GET | getIp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/getIp?ip=220.110.20.6",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"getIp"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "220.110.20.6"
+						}
+					]
+				},
+				"description": "This endpoint returns all data related to the given IP\n\n-\n\nEste endpoint retorna todos os dados relacionados ao IP informado"
+			},
+			"response": [
+				{
+					"name": "200 | getIp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/getIp?ip=220.110.20.6",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"getIp"
+							],
+							"query": [
+								{
+									"key": "ip",
+									"value": "220.110.20.6"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"response\": {\n        \"_id\": \"6298beba72bdae000982488e\",\n        \"ip\": \"220.110.20.6\",\n        \"__v\": 0,\n        \"cpf\": [\n            \"12345678903\"\n        ],\n        \"errorExcess\": false,\n        \"expireAt\": \"2022-06-03T00:00:00.000Z\"\n    },\n    \"awsFilter\": \"https://sa-east-1.console.aws.amazon.com/cloudwatch/home?region=sa-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faltu-fis-bradescard-dev-getIp/log-events$3FfilterPattern$3D$25222744b7b1-e4b9-423a-85dc-d5183eab876e$2522+$26start$3D1654177221000$26end$3D1654177821000\"\n}"
+				},
+				{
+					"name": "401 | getIp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/getIp?ip=220.110.20.6",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"getIp"
+							],
+							"query": [
+								{
+									"key": "ip",
+									"value": "220.110.20.6"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized!\",\n    \"awsFilter\": \"https://sa-east-1.console.aws.amazon.com/cloudwatch/home?region=sa-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faltu-fis-bradescard-dev-blacklist/log-events$3FfilterPattern$3D$252262a1c3b0-4b94-4459-8880-2c11ced2a6f0$2522+$26start$3D1654177202000$26end$3D1654177802000\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET | cepAdapter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/cepAdapter?cep=05717190",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"cepAdapter"
+					],
+					"query": [
+						{
+							"key": "cep",
+							"value": "05717190"
+						}
+					]
+				},
+				"description": "This endpoint returns all data related to the given IP\n\n-\n\nEste endpoint retorna todos os dados relacionados ao IP informado"
+			},
+			"response": [
+				{
+					"name": "200 | cepAdapter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/cepAdapter?cep=05717190",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"cepAdapter"
+							],
+							"query": [
+								{
+									"key": "cep",
+									"value": "05717190"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "137"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Aug 2022 20:41:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"response\": {\n        \"logradouro\": \"Rua Algemesi\",\n        \"bairro\": \"Vila Andrade\",\n        \"localidade\": \"São Paulo\",\n        \"uf\": \"SP\",\n        \"cep\": \"05717190\"\n    }\n}"
+				},
+				{
+					"name": "401 | cepAdapter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/cepAdapter?cep=05717190",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"cepAdapter"
+							],
+							"query": [
+								{
+									"key": "cep",
+									"value": "05717190"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache"
+						},
+						{
+							"key": "content-length",
+							"value": "44"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Aug 2022 20:42:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST | postBlacklist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\": \"12345678903\",\r\n    \"ip\": \"220.110.20.6\",\r\n    \"errorExcess\": false \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/blacklist",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"blacklist"
+					]
+				},
+				"description": "This endpoint sends all data provided in JSON \n\n-\n\nEste endpoint envia todos os dados fornecidos no JSON"
+			},
+			"response": [
+				{
+					"name": "200 | postBlacklist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"12345678903\",\r\n    \"ip\": \"220.110.20.6\",\r\n    \"errorExcess\": false \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/blacklist",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"blacklist"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"status_code\": 200,\n    \"response\": {\n        \"cpf\": [\n            \"12345678903\"\n        ],\n        \"expireAt\": \"2022-06-03T00:00:00.000Z\",\n        \"_id\": \"6298beba72bdae000982488e\",\n        \"ip\": \"220.110.20.6\",\n        \"__v\": 0,\n        \"errorExcess\": false\n    },\n    \"awsFilter\": \"https://sa-east-1.console.aws.amazon.com/cloudwatch/home?region=sa-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faltu-fis-bradescard-dev-blacklist/log-events$3FfilterPattern$3D$2522a8216618-b84d-437d-99e3-c623f357d868$2522+$26start$3D1654177166000$26end$3D1654177766000\"\n}"
+				},
+				{
+					"name": "401 | postBlacklist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"12345678903\",\r\n    \"ip\": \"220.110.20.6\",\r\n    \"errorExcess\": false \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/blacklist",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"blacklist"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized!\",\n    \"awsFilter\": \"https://sa-east-1.console.aws.amazon.com/cloudwatch/home?region=sa-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faltu-fis-bradescard-dev-blacklist/log-events$3FfilterPattern$3D$252262a1c3b0-4b94-4459-8880-2c11ced2a6f0$2522+$26start$3D1654177202000$26end$3D1654177802000\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "748791ed-df71-4f12-8fce-918164878d9a",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUrl",
+			"value": "localhost:3000"
+		}
+	]
+}

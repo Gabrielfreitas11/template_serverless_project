@@ -1,0 +1,43 @@
+service: template-serverless-project
+
+functions:
+  getIp:
+    handler: services/example/routes.getIp
+    environment:
+      client: fis
+      service: getIp
+      authMethod: header
+      authToken: 748791ed-df71-4f12-8fce-918164878d9a
+    events:
+      - http:
+          path: getIp
+          method: GET
+
+  cepAdapter:
+    handler: services/example/routes.cepAdapter
+    environment:
+      client: fis
+      service: getIp
+      authMethod: header
+      authToken: 748791ed-df71-4f12-8fce-918164878d9a
+    events:
+      - http:
+          path: cepAdapter
+          method: GET
+
+  blacklist:
+    handler: services/example/routes.blacklist
+    environment:
+      client: fis
+      service: blacklist
+      authMethod: header
+      authToken: 748791ed-df71-4f12-8fce-918164878d9a
+    events:
+      - http:
+          path: blacklist
+          method: POST
+
+customDomain:
+  domainName: "api.example.com.br"
+  basePath: "template-serverless-${self:provider.stage}"
+  stage: ${self:provider.stage}
