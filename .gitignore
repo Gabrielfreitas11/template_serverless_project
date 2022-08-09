@@ -12,7 +12,6 @@ jspm_packages
 .idea
 
 #config locais
-config/env.local.yml
 config/env.dev.yml
 config/env.prod.yml
 config/env.qa.yml

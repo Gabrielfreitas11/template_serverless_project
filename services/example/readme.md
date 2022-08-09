@@ -93,7 +93,7 @@ ip|Sim|
         "errorExcess": false,
         "expireAt": "2022-06-03T00:00:00.000Z"
     },
-    "awsFilter": "https://sa-east-1.console.aws.amazon.com/cloudwatch/home?region=sa-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faltu-fis-bradescard-dev-getIp/log-events$3FfilterPattern$3D$25222744b7b1-e4b9-423a-85dc-d5183eab876e$2522+$26start$3D1654177221000$26end$3D1654177821000"
+    "awsFilter": "log aqui"
 }
 ```
 
@@ -114,7 +114,7 @@ ip|Sim|
  {
     "statusCode": 401,
     "message": "Unauthorized!",
-    "awsFilter": "https://sa-east-1.console.aws.amazon.com/cloudwatch/home?region=sa-east-1#logsV2:log-groups/log-group/$252Faws$252Flambda$252Faltu-fis-bradescard-dev-blacklist/log-events$3FfilterPattern$3D$252262a1c3b0-4b94-4459-8880-2c11ced2a6f0$2522+$26start$3D1654177202000$26end$3D1654177802000"
+    "awsFilter": "log aqui"
 }
 ```
 

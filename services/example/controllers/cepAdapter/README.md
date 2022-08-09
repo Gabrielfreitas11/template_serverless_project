@@ -10,7 +10,7 @@ Essa API serve para pegar os dados de endereço de acordo com o CEP informado.
 
 ## Request
 
-- Endpoint - `https://api.altu.com.br/example-service-dev/cepAdapter`
+- Endpoint - `https://api.example.com.br/example-service-dev/cepAdapter`
 - Método - `GET`
 
 ## Uso
